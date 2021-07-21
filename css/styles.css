@@ -370,17 +370,44 @@ footer {
 
 /**********************/
 
-/**COLECCIONES: STAR WARS**/
+
+
+/**COLECCIONES**/
+
 
 /**********************/
 
 .encabezado-coleccion {
-	background-image: url(/img/starwars-cover.jpg);
-	background-position: center center;
-	background-size: cover;
-	height: 50vh;
-	margin-top: 10%;
-	position: relative;
+
+    background-size: cover;
+    height: 50vh;
+    margin-top: 10%;
+    position: relative;
+}
+
+.cover-coleccion-sw {
+    background-image: url(/img/starwars-cover.jpg);
+    background-position: center 60%;
+}
+
+.cover-coleccion-mrobot {
+    background-image: url(/img/mrrobot-cover.png);
+    background-position: center top;
+}
+
+.cover-coleccion-marvel {
+    background-image: url(/img/marvel-cover.jpg);
+    background-position: center top;
+}
+
+.cover-coleccion-breakingbad {
+    background-image: url(/img/brba-cover2.jpg);
+    background-position: center bottom;
+}
+
+.cover-coleccion-naruto {
+    background-image: url(/img/naruto-cover.jpeg);
+    background-position: center 10%;
 }
 
 .encabezado-coleccion h2 {
