@@ -3,8 +3,18 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const config = require("./config");
+const mongoose = require("mongoose");
 
 const app = express();
+
+// Conexion con la BD
+mongoose
+    .connect(config.db.connectionUrl, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then((db) => console.log("db connected"))
+    .catch((err) => console.log(err));
 
 // Importar rutas
 const indexRoutes = require("../routes/routeindex");
@@ -27,7 +37,7 @@ app.set("view engine", "ejs");
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 
-// Routes
+// Rutas
 app.use("/", indexRoutes);
 app.use("/producto", productoRoutes);
 app.use("/login", loginRoutes);
@@ -38,7 +48,7 @@ app.use("/mrrobot", mrrobotRoutes);
 app.use("/naruto", narutoRoutes);
 app.use("/starwars", starwarsRoutes);
 
-//Listener
+// Listener
 app.listen(app.get("port"), () => {
-  console.log(`Server on port: ${app.get("port")}`);
+    console.log(`Server on port: ${app.get("port")}`);
 });
