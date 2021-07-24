@@ -9,6 +9,7 @@ var UserSchema = Schema({
     password: String,
     orders: [],
     cart: [],
+    wishlist: [],
 });
 
 module.exports = mongoose.model("User", UserSchema);
