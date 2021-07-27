@@ -32,7 +32,7 @@ const wishlistRoutes = require("../routes/routewishlist");
 app.set("port", config.app.port);
 app.set("views", "views");
 app.set("view engine", "ejs");
-//app.use(express.static(path.join(__dirname)));
+app.use(express.static('public'));
 
 // Middlewares
 app.use(morgan("dev"));

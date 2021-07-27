@@ -1,112 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
+<%- include ("./templates/header") %>
+
     <link rel="stylesheet" href="../css/style_product_page.css" />
-    <title>Product Name</title>
-  </head>
-  <body>
-    <header>
-      <div class="icon-container">
-        <i id="back-icon" class="bi bi-chevron-left"></i>
-      </div>
-    </header>
+
     <main>
-      <div class="product-title">
-        <h1>AHSOKA TANO</h1>
-      </div>
-      <div class="product-container">
-        <div class="product-container-image-pane">
-          <img src="/img/ahsoka1_product.jpg" alt="Ahsoka Tano" />
+        <div class="product-title">
+            <h1>AHSOKA TANO</h1>
         </div>
-        <div class="rounded-divider"></div>
-        <div class="product-container-info-pane">
-          <h1>$200.00</h1>
-          <h2>Funko Pop! Star Wars. Clone Wars - Ahsoka Tano Vinyl Figure</h2>
-          <h3>- STAR WARS COLLECTION -</h3>
-          <div class="product-controls">
-            <button
-              type="button"
-              class="btn btn-outline-dark btn-lg"
-              style="margin-right: 15px"
-            >
+        <div class="product-container">
+            <div class="product-container-image-pane">
+                <img src="/img/ahsoka1_product.jpg" alt="Ahsoka Tano" />
+            </div>
+            <div class="rounded-divider"></div>
+            <div class="product-container-info-pane">
+                <h1>$200.00</h1>
+                <h2>Funko Pop! Star Wars. Clone Wars - Ahsoka Tano Vinyl Figure</h2>
+                <h3>- STAR WARS COLLECTION -</h3>
+                <div class="product-controls">
+                    <button type="button" class="btn btn-outline-dark btn-lg" style="margin-right: 15px">
               Agregar al carrito
             </button>
-            <button type="button" class="btn btn-outline-dark btn-lg">
+                    <button type="button" class="btn btn-outline-dark btn-lg">
               Agregar a la wishlist
             </button>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <h3 id="related-items-title">Artículos relacionados</h3>
-      <div class="related-items-container">
-        <div class="related-item">
-          <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
+        <h3 id="related-items-title">Artículos relacionados</h3>
+        <div class="related-items-container">
+            <div class="related-item">
+                <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
 
-          <div class="descripcion-producto">
-            <span class="coleccion-producto">Star Wars</span>
-            <p>Han solo</p>
-            <b>$299</b>
-          </div>
+                <div class="descripcion-producto">
+                    <span class="coleccion-producto">Star Wars</span>
+                    <p>Han solo</p>
+                    <b>$299</b>
+                </div>
+            </div>
+            <div class="related-item">
+                <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
+
+                <div class="descripcion-producto">
+                    <span class="coleccion-producto">Star Wars</span>
+                    <p>Han solo</p>
+                    <b>$299</b>
+                </div>
+            </div>
+            <div class="related-item">
+                <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
+
+                <div class="descripcion-producto">
+                    <span class="coleccion-producto">Star Wars</span>
+                    <p>Han solo</p>
+                    <b>$299</b>
+                </div>
+            </div>
         </div>
-        <div class="related-item">
-          <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
-
-          <div class="descripcion-producto">
-            <span class="coleccion-producto">Star Wars</span>
-            <p>Han solo</p>
-            <b>$299</b>
-          </div>
-        </div>
-        <div class="related-item">
-          <a href="#"> <img src="/img/product-hansolo.jpg" alt="" /></a>
-
-          <div class="descripcion-producto">
-            <span class="coleccion-producto">Star Wars</span>
-            <p>Han solo</p>
-            <b>$299</b>
-          </div>
-        </div>
-      </div>
     </main>
-    <footer class="d-flex-center">
-      <a href="/index.html">
-        <div class="logo">
-          <i class="fas fa-compass"></i>
-          <p class="texto-logo">L O Z A</p>
-        </div>
-      </a>
-
-      <div class="sobre-nosotros">
-        <span>Sobre nosotros</span>
-      </div>
-
-      <div class="sobre-nosotros">
-        <span>Contacto</span>
-        <p>contacto@loza.com</p>
-        <div class="socialmedia">
-          <a href="https://facebook.com"
-            ><img src="/img/socialmedia/fbWhite.png" alt="iconoFb"
-          /></a>
-          <a href="https://instagram.com">
-            <img src="/img/socialmedia/instaWhite.png" alt="iconoIg" />
-          </a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    <%- include ("./templates/footer") %>
