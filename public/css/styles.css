@@ -54,6 +54,7 @@ i {
 
 .d-block {
     display: block;
+    text-align: center;
 }
 
 .navbar-tools {
@@ -128,6 +129,7 @@ header {
     border: none;
     resize: none;
     outline: none;
+    margin-top: 2rem;
 }
 
 .searchbar i {
@@ -147,6 +149,7 @@ header {
     margin-left: -2px;
     background-color: #415a77;
     border-radius: 5%;
+    margin-top: 2rem;
 }
 
 
@@ -201,6 +204,10 @@ header {
     color: white;
 }
 
+.cart-info-navbar p {
+    margin-bottom: 0;
+}
+
 @media screen and (min-width: 1024px) {
     .logo p {
         font-size: 2.4rem;
@@ -208,6 +215,7 @@ header {
     .account-info-navbar p,
     .icono-flecha {
         display: block;
+        margin-bottom: 0;
     }
     .account-info-navbar {
         margin-right: 3rem;
@@ -217,6 +225,7 @@ header {
         height: 4rem;
         font-size: 1.4rem;
         padding: 0 1.5rem;
+        margin-top: 0;
     }
     .searchbar i {
         margin-right: 0;
@@ -227,6 +236,7 @@ header {
         width: 4rem;
         border: none;
         margin-left: -2px;
+        margin-top: 0;
     }
     .icono-usuario {
         display: none;
@@ -266,14 +276,21 @@ header {
 /**Colecciones**/
 
 .colecciones-navbar ul {
+    display: none;
+}
+
+.display-colecciones-navbar {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 #Mobile-colecciones li {
     margin-top: 2rem;
+}
+
+#Mobile-colecciones a:hover {
+    color: #778DA9;
 }
 
 .colecciones-navbar {
@@ -308,6 +325,7 @@ footer {
     display: flex;
     color: white;
     justify-content: space-around;
+    align-items: center;
 }
 
 .sobre-nosotros {
@@ -337,6 +355,23 @@ footer {
     margin-top: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    footer {
+        display: block;
+        padding: 3rem 2rem;
+    }
+    .sobre-nosotros {
+        width: 100%;
+        margin: 2rem 0 0 0;
+        text-align: center;
+    }
+    .logo-footer {
+        margin: 1rem auto;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 
 /**********************/
 
@@ -356,6 +391,10 @@ footer {
 
 
 /**Bienvenida**/
+
+.bienvenida {
+    margin-top: 4rem;
+}
 
 .logo-bienvenida {
     color: #0d1b2a;
@@ -600,4 +639,21 @@ footer {
 
 .filtro-productos select {
     font-weight: bold;
+}
+
+.texto-logo {
+    margin-bottom: 0;
+}
+
+.carousel-item img {
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+    #carousel {
+        margin-top: 20%;
+    }
 }
