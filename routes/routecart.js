@@ -1,25 +1,33 @@
 const express = require("express");
 const Cart = require("../model/cart");
-const Product = require("../model/product");
 const app = express();
 
 app.get("/", async (req, res) => {
     var cart = await Cart.find({}).lean();
-    cart[0] = {
-        Id: 23,
-        Name: "I am Iron Man ",
-        Img_Id: "1ixm_H3lVy9K0Ancywz5w7Iq_iPbClpNH",
-        Price: "799",
-    };
+    var total = 0;
+
     console.log(cart);
 
-    var total = 799;
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].Price;
+    }
 
     res.render("cart", { cart: cart, total: parseInt(total) });
 });
 
-app.post("/delete", (req, res) => {
-    res.render("emptycart");
+app.get("/delete/:id", async (req, res) => {
+    var id = req.params.id;
+    await Cart.deleteOne({ Id: id });
+
+    var cart = await Cart.find({}).lean();
+    var total = 0;
+
+    console.log(cart);
+
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].Price;
+    }
+    res.render("cart", { cart: cart, total: parseInt(total) });
 });
 
 app.post("/add", async (req, res) => {
