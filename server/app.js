@@ -29,6 +29,7 @@ const starwarsRoutes = require("../routes/routestarwars");
 const wishlistRoutes = require("../routes/routewishlist");
 const cartRoutes = require("../routes/routecart");
 const consultaRoutes = require("../routes/routeconsulta");
+const accountRoutes = require ("../routes/routeaccount");
 
 // Configuraciones
 app.set("port", config.app.port);
@@ -53,6 +54,7 @@ app.use("/starwars", starwarsRoutes);
 app.use("/wishlist", wishlistRoutes);
 app.use("/cart", cartRoutes);
 app.use("/consulta", consultaRoutes);
+app.use("/account", accountRoutes);
 
 // Listener
 app.listen(app.get("port"), () => {
