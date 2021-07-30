@@ -17,6 +17,20 @@
     width: 40%;
 }
 
+@media screen and (max-width: 768px) {
+    .cart-container {
+        display: block;
+        margin: 30% 0 10% 0;
+    }
+    .products-container {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .cart-controls {
+        width: 100%;
+    }
+}
+
 .product-card {
     margin: 0 0 0 5%;
     display: block;
@@ -37,7 +51,12 @@
 }
 
 .card-img-container {
-    padding: 5% 0 2% 5%;
+    padding: 2% 0;
+}
+
+.card-img-container img {
+    width: 20rem;
+    margin-bottom: 10rem;
 }
 
 .card-controls {
@@ -70,4 +89,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
