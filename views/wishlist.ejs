@@ -19,25 +19,29 @@
         <input type="radio" name = "radio-button" id = "image4">
         <input type="radio" name = "radio-button" id = "image5">
         
+        <%  for(var i = 0; i<4; i++)  {   %>
         <div class = "image-slide s1">
-            <img src = "img/JIraiyaOnToad.PNG" onclick="OpenPopUp(this)">
+            <!-- <img src = "img/JIraiyaOnToad.PNG" onclick="OpenPopUp(this)"> -->
+            <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i].Img_Id%>" onclick="OpenPopUp(this)">
         </div>
 
         <div class = "image-slide">
-            <img src = "img/Kakashi.PNG" onclick="OpenPopUp(this)">
+            <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i+1].Img_Id%>" onclick="OpenPopUp(this)">
         </div>
 
         <div class = "image-slide">
-            <img src = "img/Kurama.PNG" onclick="OpenPopUp(this)">
+            <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i+2].Img_Id%>" onclick="OpenPopUp(this)">
         </div>
 
         <div class = "image-slide">
-            <img src = "img/MInato.PNG" onclick="OpenPopUp(this)">
+            <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i+3].Img_Id%>" onclick="OpenPopUp(this)">
         </div>
 
         <div class = "image-slide">
-            <img src = "img/Tobi.PNG" onclick="OpenPopUp(this)">
+            <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i+4].Img_Id%>" onclick="OpenPopUp(this)">
         </div>
+        
+        <%  }          %>
     </div>
   
 </div>
@@ -94,7 +98,7 @@
 </div>
 <script>
 
-        function OpenPopUp(img){
+        function OpenPopUp(img, product){
 
             document.getElementById("popUPID").style.display="block";
 
@@ -118,7 +122,8 @@
             document.getElementById("same-img").src = tsrc;
             document.getElementById("diff-img").src = ttsrc;
 
-            document.getElementById("popName").textContent = tsrc.slice(26, tsrc.length-4) + ": $399.99";
+            // document.getElementById("popName").textContent = tsrc.slice(26, tsrc.length-4) + ": $399.99";
+            document.getElementById("popName").textContent = "Price: $599"
         }
 
 
