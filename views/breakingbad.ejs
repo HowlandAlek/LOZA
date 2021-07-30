@@ -1,180 +1,37 @@
 <%- include ("./templates/header") %>
 
-    <section class="encabezado-coleccion cover-coleccion-breakingbad contenedor-body">
-        <h2>BREAKING BAD</h2>
-    </section>
+<section
+    class="encabezado-coleccion cover-coleccion-breakingbad contenedor-body"
+>
+    <h2>BREAKING BAD</h2>
+</section>
 
-    <section class="contenedor-body">
-        <div class="filtro-productos d-flex-center">
-            <p>Filtrar por:</p>
-            <select name="filtro" id="filtro">
-                <option value="relevancia">Relevancia</option>
-                <option value="precio-alto">Precio - Más alto a más bajo</option>
-                <option value="precio-bajo">Precio - Más bajo a más alto</option>
-                <option value="alfabetico">Alfabético</option>
-              </select>
-        </div>
-        <div class="grid-productos">
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
+<section class="contenedor-body">
+    <div class="filtro-productos d-flex-center">
+        <p>Filtrar por:</p>
+        <select name="filtro" id="filtro">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio-alto">Precio - Más alto a más bajo</option>
+            <option value="precio-bajo">Precio - Más bajo a más alto</option>
+            <option value="alfabetico">Alfabético</option>
+        </select>
+    </div>
+    <div class="grid-productos">
+        <%  for(var i = 0; i<productos.length; i++)  {            %>
 
             <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
+                <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
 
                 <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
+                    <span class="coleccion-producto"> <%= productos[i].Collection_Name  %></span>
+                    <p>
+                        <%= productos[i].Name  %>
+                    </p>
+                    <b>$<%= productos[i].Price  %>.00</b>
                 </div>
             </div>
+            <%  }          %>
+    </div>
+</section>
 
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <%- include ("./templates/footer") %>
+<%- include ("./templates/footer") %>
