@@ -8,10 +8,7 @@ var ProductSchema = Schema({
     price: Number,
     rarity: String,
     stock: Number,
-    img_id: {
-        type: String,
-        default: "",
-    },
+    img_id: String
 });
 
 module.exports = mongoose.model("Product", ProductSchema);
