@@ -434,6 +434,7 @@ footer {
 
 .producto img {
     width: 30rem;
+    height: 30rem;
 }
 
 .descripcion-producto {
@@ -579,6 +580,13 @@ footer {
 
 /**********************/
 
+.titulo-consulta {
+    margin: 15% 0 5% 0;
+    color: #415a77;
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+}
+
 .encabezado-coleccion {
     background-size: cover;
     height: 48rem;
@@ -639,6 +647,10 @@ footer {
 
 .filtro-productos select {
     font-weight: bold;
+}
+
+.filtro-productos {
+    margin-bottom: 5%;
 }
 
 .texto-logo {

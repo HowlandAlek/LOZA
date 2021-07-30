@@ -1,10 +1,9 @@
 <%- include ("./templates/header") %>
 
-    <section class="encabezado-coleccion cover-coleccion-breakingbad contenedor-body">
-        <h2>BREAKING BAD</h2>
-    </section>
-
     <section class="contenedor-body">
+        <h1 class="titulo-consulta">
+            <%= title %>
+        </h1>
         <div class="filtro-productos d-flex-center">
             <p>Filtrar por:</p>
             <select name="filtro" id="filtro">
@@ -12,20 +11,20 @@
             <option value="precio-alto">Precio - Más alto a más bajo</option>
             <option value="precio-bajo">Precio - Más bajo a más alto</option>
             <option value="alfabetico">Alfabético</option>
-        </select>
+          </select>
         </div>
         <div class="grid-productos">
-            <%  for(var i = 0; i<productos.length; i++)  {            %>
+            <%  for(var i = 0; i<todosProductos.length; i++)  {            %>
 
                 <div class="producto">
-                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
+                    <a href="/producto/:<%= todosProductos[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= todosProductos[i].Img_Id%>" alt="Img"></a>
 
                     <div class="descripcion-producto">
-                        <span class="coleccion-producto"> <%= productos[i].Collection_Name  %></span>
+                        <span class="coleccion-producto"> <%= todosProductos[i].Collection_Name  %></span>
                         <p>
-                            <%= productos[i].Name  %>
+                            <%= todosProductos[i].Name  %>
                         </p>
-                        <b>$<%= productos[i].Price  %>.00</b>
+                        <b>$<%= todosProductos[i].Price  %>.00</b>
                     </div>
                 </div>
                 <%  }          %>
