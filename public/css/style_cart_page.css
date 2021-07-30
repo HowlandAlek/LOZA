@@ -32,7 +32,7 @@
 }
 
 .product-card {
-    margin: 0 0 0 5%;
+    margin: 0 0 5% 5%;
     display: block;
     height: 350px;
     overflow: hidden;

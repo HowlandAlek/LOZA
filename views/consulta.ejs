@@ -4,15 +4,7 @@
         <h1 class="titulo-consulta">
             <%= title %>
         </h1>
-        <div class="filtro-productos d-flex-center">
-            <p>Filtrar por:</p>
-            <select name="filtro" id="filtro">
-            <option value="relevancia">Relevancia</option>
-            <option value="precio-alto">Precio - Más alto a más bajo</option>
-            <option value="precio-bajo">Precio - Más bajo a más alto</option>
-            <option value="alfabetico">Alfabético</option>
-          </select>
-        </div>
+
         <div class="grid-productos">
             <%  for(var i = 0; i<todosProductos.length; i++)  {            %>
 
