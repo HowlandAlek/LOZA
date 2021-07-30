@@ -20,6 +20,8 @@ app.get("/", async (req, res) => {
         cart: [],
     });
     await user.save();
+
+    console.log("Hola:" + user.name);
     res.render("index");
 });
 

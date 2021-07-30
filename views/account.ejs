@@ -1,0 +1,99 @@
+<%- include ("./templates/header") %>
+
+<link rel="stylesheet" href="css/style_account_page.css">
+<!-- Esto es lo de Jquery -->
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+      
+<section class="encabezado-coleccion cover-coleccion-account contenedor-body">
+    <h2>IDENTIFY YOURSELF!!!</h2>
+</section>
+
+<main>
+<div class="row">
+    <div class="col-lg-12">
+      <!-- Reservation Page -->
+      <div class="card">
+        <div class="card-header">
+          <h1>User Information</h1>
+        </div>
+        <div class="card-body">
+
+          <form role="form" action = "/account/update" method="POST">
+            <div class="form-group">
+              <h3>Name</h3>
+              <p>Old name: <%= user.name %></p>
+              <label for = "inputName" class = "sr-only">New name:</label>
+              <input type = "text" name = "name" id = "inputName" class = "form-control" placeholder = "Name">
+            </div>
+            <div class="form-group">
+              <h3>Last Name</h3>
+              <p>Old last name: <%= user.last_name %></p>
+              <label for = "inputLastName" class = "sr-only">New last name:</label>
+              <input type = "text" name = "lastName" id = "inputLastName" class = "form-control" placeholder = "Last Name">
+            </div>
+            <div class="form-group">
+                <h3>Email</h3>
+                <p>Old email: <%= user.email %></p>
+                <label for = "inputEmail" class = "sr-only">New email:</label>
+                <input type = "text" name = "email" id = "inputEmail" class = "form-control" placeholder = "Email">
+            </div>
+            <div class="form-group">
+                <h3>Phone</h3>
+                <p>Old phone: <%= user.phone %></p>
+                <label for = "inputPhone" class = "sr-only">New phone:</label>
+                <input type = "text" name = "phone" id = "inputPhone" class = "form-control" placeholder = "Phone">
+            </div>
+            <div class="form-group" id = "password-form">
+                <h3>Password</h3>
+                <label for = "inputOldPassword" class = "sr-only">Old Password:</label>
+                <input type = "text" name = "oldpsswd" id = "inputOldPassword" class = "form-control" placeholder = "Old Password" >
+                <label for = "inputNewPassword" class = "sr-only">New Password:</label>
+                <input type = "text" name = "newpsswd" id = "inputNewPassword" class = "form-control" placeholder = "New Password" >
+                <label for = "confirmNewPassword" class = "sr-only">Confirm Password:</label>
+                <input type = "text" name = "cpsswd" id = "confirmNewPassword" class = "form-control" placeholder = "Confirm Password" >
+            </div>
+            
+            <button type="submit" class="btn-submit" id = "btnSubmit" >Submit</button>
+          </form>
+          <!-- Buton actualizar -->
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <script>
+    
+    console.log(User);
+    // Boton 
+    var btn = $("#btnSubmit").on("click", upDate);
+
+    function upDate(event){
+
+        event.preventDefault();
+
+        var nName = $("#inputName").val();
+        var nLName = $("#inputLastName").val();
+        var nEmail = $("#inputEmail").val();
+        var nPhone = $("#inputPhone").val();
+        var oPsswd = $("#inputOldPassword").val();
+        var nPsswd = $("#inputNewPassword").val();
+        var cPsswd = $("#confirmNewPassword").val();
+
+        console.log(nName + " " + nLName);
+
+        var p = Request.arguments.user;
+        console.log(p);
+
+    }
+</script>
+-->
+
+</main>
+
+<%- include ("./templates/footer") %>

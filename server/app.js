@@ -27,6 +27,8 @@ const mrrobotRoutes = require("../routes/routemrrobot");
 const narutoRoutes = require("../routes/routenaruto");
 const starwarsRoutes = require("../routes/routestarwars");
 const wishlistRoutes = require("../routes/routewishlist");
+const accountRoutes = require ("../routes/routeaccount");
+const accountRoutesUpdate = require ("../routes/routeaccountpost");
 
 // Configuraciones
 app.set("port", config.app.port);
@@ -49,6 +51,8 @@ app.use("/mrrobot", mrrobotRoutes);
 app.use("/naruto", narutoRoutes);
 app.use("/starwars", starwarsRoutes);
 app.use("/wishlist", wishlistRoutes);
+app.use("/account", accountRoutes);
+app.use("/account/update", accountRoutesUpdate)
 
 // Listener
 app.listen(app.get("port"), () => {
