@@ -84,6 +84,7 @@ h3 {
 
 #related-items-title {
     text-align: center;
+    color: #415a77;
 }
 
 .related-items-container {
@@ -102,7 +103,6 @@ h3 {
         justify-content: center;
         margin-top: 10%;
     }
-
     .rounded-divider {
         display: none;
     }
@@ -110,21 +110,18 @@ h3 {
         flex-direction: column;
         width: 50%;
     }
-
     .product-container-image-pane {
         padding-top: 0%;
     }
-
     .product-container-info-pane {
         flex-direction: column;
         padding: 50px 5% 0px 5%;
         width: 50%;
     }
-
     .product-container-info-pane h1 {
         font-size: 50px;
+        color: #415a77;
     }
-
     .rounded-divider {
         display: none;
     }

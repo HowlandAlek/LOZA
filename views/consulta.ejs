@@ -17,7 +17,7 @@
             <%  for(var i = 0; i<todosProductos.length; i++)  {            %>
 
                 <div class="producto">
-                    <a href="/producto/:<%= todosProductos[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= todosProductos[i].Img_Id%>" alt="Img"></a>
+                    <a href="/producto/<%= todosProductos[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= todosProductos[i].Img_Id%>" alt="Img"></a>
 
                     <div class="descripcion-producto">
                         <span class="coleccion-producto"> <%= todosProductos[i].Collection_Name  %></span>

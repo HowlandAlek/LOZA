@@ -1,51 +1,48 @@
 <%- include ("./templates/header") %>
 
-<link rel="stylesheet" href="../css/style_product_page.css" />
+    <link rel="stylesheet" href="../css/style_product_page.css" />
 
-<main>
-    <div class="product-container">
-        <div class="product-container-image-pane">
-            <img
-                src="https://drive.google.com/uc?export=view&id=<%= productInfo[0].Img_Id%>"
-                alt=""
-            />
-        </div>
-        <div class="rounded-divider"></div>
-        <div class="product-container-info-pane">
-            <h1><%= productInfo[0].Name %></h1>
-            <h2>$<%= productInfo[0].Price %>.00 MXN</h2>
-            <h3>- <%= productInfo[0].Collection_Name %> -</h3>
-            <div class="product-controls">
-                <button
-                    type="button"
-                    class="btn btn-outline-dark btn-lg"
-                    style="margin-right: 15px"
-                >
+    <main>
+        <div class="product-container">
+            <div class="product-container-image-pane">
+                <img src="https://drive.google.com/uc?export=view&id=<%= productInfo[0].Img_Id%>" alt="" />
+            </div>
+            <div class="rounded-divider"></div>
+            <div class="product-container-info-pane">
+                <h1>
+                    <%= productInfo[0].Name %>
+                </h1>
+                <h2>$
+                    <%= productInfo[0].Price %>.00 MXN</h2>
+                <h3>-
+                    <%= productInfo[0].Collection_Name %> -</h3>
+                <div class="product-controls">
+                    <button type="button" class="btn btn-outline-dark btn-lg" style="margin-right: 15px">
                     Agregar al carrito
                 </button>
-                <button type="button" class="btn btn-outline-dark btn-lg">
+                    <button type="button" class="btn btn-outline-dark btn-lg">
                     Agregar a la wishlist
                 </button>
-            </div>
-        </div>
-    </div>
-
-    <h3 id="related-items-title">Artículos relacionados</h3>
-    <div class="grid-productos">
-        <%  for(var i = 0; i<productosRelacionados.length; i++)  {            %>
-
-            <div class="producto">
-                <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productosRelacionados[i].Img_Id%>" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto"> <%= productosRelacionados[i].Collection_Name  %></span>
-                    <p>
-                        <%= productosRelacionados[i].Name  %>
-                    </p>
-                    <b>$<%= productosRelacionados[i].Price  %>.00</b>
                 </div>
             </div>
-            <%  }          %>
-    </div>
-</main>
-<%- include ("./templates/footer") %>
+        </div>
+
+        <h3 id="related-items-title">Artículos relacionados</h3>
+        <div class="grid-productos-3">
+            <%  for(var i = 0; i<productosRelacionados.length; i++)  {            %>
+
+                <div class="producto">
+                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productosRelacionados[i].Img_Id%>" alt=""></a>
+
+                    <div class="descripcion-producto">
+                        <span class="coleccion-producto"> <%= productosRelacionados[i].Collection_Name  %></span>
+                        <p>
+                            <%= productosRelacionados[i].Name  %>
+                        </p>
+                        <b>$<%= productosRelacionados[i].Price  %>.00</b>
+                    </div>
+                </div>
+                <%  }          %>
+        </div>
+    </main>
+    <%- include ("./templates/footer") %>
