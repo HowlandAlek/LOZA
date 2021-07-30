@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", async (req, res) => {
     // Obtiene todos los productos de la colección
-    var productos = await Product.find({ Collection_Name: "Marvel" });
+    var productos = await Product.find({ Collection_Name: "Marvel" }).lean();
     res.render("marvel", { productos });
 });
 

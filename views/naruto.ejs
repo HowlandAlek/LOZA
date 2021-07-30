@@ -15,165 +15,20 @@
               </select>
         </div>
         <div class="grid-productos">
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
+            <%  for(var i = 0; i<productos.length; i++)  {            %>
 
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
+                <div class="producto">
+                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
+    
+                    <div class="descripcion-producto">
+                        <span class="coleccion-producto"> <%= productos[i].Collection_Name  %></span>
+                        <p>
+                            <%= productos[i].Name  %>
+                        </p>
+                        <b>$<%= productos[i].Price  %>.00</b>
+                    </div>
                 </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
-
-            <div class="producto">
-                <a href="#"> <img src="/img/product-hansolo.jpg" alt=""></a>
-
-                <div class="descripcion-producto">
-                    <span class="coleccion-producto">Star Wars</span>
-                    <p>Han solo</p>
-                    <b>$299</b>
-                </div>
-            </div>
+                <%  }          %>
         </div>
     </section>
 
