@@ -7,13 +7,10 @@
     <section class="contenedor-body">
         <div class="filtro-productos d-flex-center">
             <p>Filtrar por:</p>
-            <select name="filtro" id="filtroBrBa">
-               
-                <a href="/breakingbad">   <option class="brbaOp" value="relevancia">Relevancia</option></a>
-                <a href="/breakingbad/p1">     <option class="brbaOp" value="precio-alto">Precio - Más alto a más bajo</option></a>
-                    <a href="/breakingbad/p2">     <option class="brbaOp" value="precio-bajo">Precio - Más bajo a más alto</option></a>
-                        <a href="/breakingbad/alf">     <option class="brbaOp" value="alfabetico">Alfabético</option></a>
-        </select>
+            <a href= "/breakingbad" class="btn btn-info" style="margin-right: 15px;"> Relevancia</a>
+            <a href= "/breakingbad/p1"  class="btn btn-info" style="margin-right: 15px;"> Precio - Más alto a más bajo</a>
+            <a href= "/breakingbad/p2"  class="btn btn-info" style="margin-right: 15px;"> Precio - Más bajo a más alto</a>
+            <a href= "/breakingbad/alf"  class="btn btn-info" style="margin-right: 15px;"> Alfabético</a>
         </div>
         <div class="grid-productos">
             <%  for(var i = 0; i<productos.length; i++)  {            %>
