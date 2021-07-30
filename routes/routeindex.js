@@ -12,7 +12,7 @@ app.get("/", async (req, res) => {
 app.get("/todasColecciones", async (req, res) => {
     // Obtiene todos los productos
     var todosProductos = await Product.find();
-    res.send(todosProductos);
+    res.render("consulta", { todosProductos });
 });
 
 module.exports = app;
