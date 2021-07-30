@@ -40,7 +40,6 @@ h3 {
     justify-content: center;
     height: 500px;
     padding-top: 30%;
-
 }
 
 .rounded-divider {
@@ -101,15 +100,15 @@ h3 {
     .product-container {
         display: flex;
         justify-content: center;
+        margin-top: 10%;
     }
-  
+
     .rounded-divider {
         display: none;
     }
     .product-container-info-pane {
         flex-direction: column;
         width: 50%;
-        padding-top: 20%;
     }
 
     .product-container-image-pane {
@@ -130,4 +129,3 @@ h3 {
         display: none;
     }
 }
-
