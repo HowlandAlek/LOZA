@@ -1,13 +1,11 @@
 const express = require("express");
 const Cart = require("../model/cart");
+const Product = require("../model/product");
 const app = express();
 
 app.get("/", async (req, res) => {
     var cart = await Cart.find({}).lean();
     var total = 0;
-
-    console.log(cart);
-
     for (let i = 0; i < cart.length; i++) {
         total += cart[i].Price;
     }
@@ -22,30 +20,28 @@ app.get("/delete/:id", async (req, res) => {
     var cart = await Cart.find({}).lean();
     var total = 0;
 
-    console.log(cart);
-
     for (let i = 0; i < cart.length; i++) {
         total += cart[i].Price;
     }
     res.render("cart", { cart: cart, total: parseInt(total) });
 });
 
-app.post("/add", async (req, res) => {
-    var id = req.body.id;
-    var name = req.body.name;
-    var img_id = req.body.img_id;
-    var price = req.body.price;
+app.get("/add/:id", async (req, res) => {
+    var id = req.params.id;
+    var queryAdd = await Product.find({
+        _id: id,
+    }).lean();
 
-    var nuevoItem = {
-        Id: id,
-        Name: name,
-        Img_Id: img_id,
-        Price: price,
-    };
+    console.log(queryAdd[0].Img_Id);
 
-    await User.updateOne({ name: "L O Z A" }, { cart: nuevoItem });
-    res.send(nuevoItem);
-    res.redirect("/");
+    await Cart.insertMany({
+        Id: queryAdd[0]._id,
+        Name: queryAdd[0].Name,
+        Price: queryAdd[0].Price,
+        img_id: queryAdd[0].Img_Id,
+    });
+
+    res.redirect(`/producto/${id}`);
 });
 
 module.exports = app;
