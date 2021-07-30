@@ -27,12 +27,13 @@ const mrrobotRoutes = require("../routes/routemrrobot");
 const narutoRoutes = require("../routes/routenaruto");
 const starwarsRoutes = require("../routes/routestarwars");
 const wishlistRoutes = require("../routes/routewishlist");
+const cartRoutes = require("../routes/routecart");
 
 // Configuraciones
 app.set("port", config.app.port);
 app.set("views", "views");
 app.set("view engine", "ejs");
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Middlewares
 app.use(morgan("dev"));
@@ -49,6 +50,7 @@ app.use("/mrrobot", mrrobotRoutes);
 app.use("/naruto", narutoRoutes);
 app.use("/starwars", starwarsRoutes);
 app.use("/wishlist", wishlistRoutes);
+app.use("/cart", cartRoutes);
 
 // Listener
 app.listen(app.get("port"), () => {
