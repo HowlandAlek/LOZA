@@ -1,0 +1,34 @@
+<%- include ("./templates/header") %>
+
+    <section class="contenedor-body">
+        <h1 class="titulo-consulta">
+            <%= title %>
+        </h1>
+        <div class="filtro-productos d-flex-center">
+            <p>Filtrar por:</p>
+            <select name="filtro" id="filtro">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio-alto">Precio - Más alto a más bajo</option>
+            <option value="precio-bajo">Precio - Más bajo a más alto</option>
+            <option value="alfabetico">Alfabético</option>
+          </select>
+        </div>
+        <div class="grid-productos">
+            <%  for(var i = 0; i<todosProductos.length; i++)  {            %>
+
+                <div class="producto">
+                    <a href="/producto/<%= todosProductos[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= todosProductos[i].Img_Id%>" alt="Img"></a>
+
+                    <div class="descripcion-producto">
+                        <span class="coleccion-producto"> <%= todosProductos[i].Collection_Name  %></span>
+                        <p>
+                            <%= todosProductos[i].Name  %>
+                        </p>
+                        <b>$<%= todosProductos[i].Price  %>.00</b>
+                    </div>
+                </div>
+                <%  }          %>
+        </div>
+    </section>
+
+    <%- include ("./templates/footer") %>

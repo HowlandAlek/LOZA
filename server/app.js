@@ -27,14 +27,15 @@ const mrrobotRoutes = require("../routes/routemrrobot");
 const narutoRoutes = require("../routes/routenaruto");
 const starwarsRoutes = require("../routes/routestarwars");
 const wishlistRoutes = require("../routes/routewishlist");
+const cartRoutes = require("../routes/routecart");
+const consultaRoutes = require("../routes/routeconsulta");
 const accountRoutes = require ("../routes/routeaccount");
-const accountRoutesUpdate = require ("../routes/routeaccountpost");
 
 // Configuraciones
 app.set("port", config.app.port);
+app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "ejs");
-app.use(express.static('public'));
 
 // Middlewares
 app.use(morgan("dev"));
@@ -51,8 +52,9 @@ app.use("/mrrobot", mrrobotRoutes);
 app.use("/naruto", narutoRoutes);
 app.use("/starwars", starwarsRoutes);
 app.use("/wishlist", wishlistRoutes);
+app.use("/cart", cartRoutes);
+app.use("/consulta", consultaRoutes);
 app.use("/account", accountRoutes);
-app.use("/account/update", accountRoutesUpdate)
 
 // Listener
 app.listen(app.get("port"), () => {
