@@ -18,8 +18,8 @@
             <%  for(var i = 0; i<productos.length; i++)  {            %>
 
                 <div class="producto">
-                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
-    
+                    <a href="/producto/<%= productos[i]._id  %>">> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
+
                     <div class="descripcion-producto">
                         <span class="coleccion-producto"> <%= productos[i].Collection_Name  %></span>
                         <p>

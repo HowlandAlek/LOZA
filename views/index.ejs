@@ -29,7 +29,7 @@
             <%  for(var i = 0; i<4; i++)  {            %>
 
                 <div class="producto">
-                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i].Img_Id%>" alt=""></a>
+                    <a href="/producto/<%= productosDestacados[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= productosDestacados[i].Img_Id%>" alt=""></a>
 
                     <div class="descripcion-producto">
                         <span class="coleccion-producto"> <%= productosDestacados[i].Collection_Name  %></span>

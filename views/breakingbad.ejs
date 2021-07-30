@@ -8,17 +8,18 @@
         <div class="filtro-productos d-flex-center">
             <p>Filtrar por:</p>
             <select name="filtro" id="filtroBrBa">
-            <option class="brbaOp" value="relevancia">Relevancia</option>
-            <option class="brbaOp" value="precio-alto">Precio - Más alto a más bajo</option>
-            <option class="brbaOp" value="precio-bajo">Precio - Más bajo a más alto</option>
-            <option class="brbaOp" value="alfabetico">Alfabético</option>
+               
+                <a href="/breakingbad">   <option class="brbaOp" value="relevancia">Relevancia</option></a>
+                <a href="/breakingbad/p1">     <option class="brbaOp" value="precio-alto">Precio - Más alto a más bajo</option></a>
+                    <a href="/breakingbad/p2">     <option class="brbaOp" value="precio-bajo">Precio - Más bajo a más alto</option></a>
+                        <a href="/breakingbad/alf">     <option class="brbaOp" value="alfabetico">Alfabético</option></a>
         </select>
         </div>
         <div class="grid-productos">
             <%  for(var i = 0; i<productos.length; i++)  {            %>
 
                 <div class="producto">
-                    <a href="#"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
+                    <a href="/producto/<%= productos[i]._id  %>"> <img src="https://drive.google.com/uc?export=view&id=<%= productos[i].Img_Id%>" alt=""></a>
 
                     <div class="descripcion-producto">
                         <span class="coleccion-producto"> <%= productos[i].Collection_Name  %></span>
