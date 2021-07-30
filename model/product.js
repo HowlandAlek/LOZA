@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var ProductSchema = Schema({
     collection_id: Number,
     name: String,
-    collection: String,
+    collection_name: String,
     price: Number,
     rarity: String,
     stock: Number,

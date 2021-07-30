@@ -1,26 +1,18 @@
 const express = require("express");
 const User = require("../model/user");
+const Product = require("../model/product");
 const app = express();
 
 app.get("/", async (req, res) => {
-    User.deleteMany({ name: "ADMIN" }, (err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("Registros eliminados");
-        }
-    });
-    var user = new User({
-        name: "ADMIN",
-        last_name: "",
-        email: "lozadevteam@gmail.com",
-        phone: "1234456",
-        password: "sysadmin",
-        orders: [],
-        cart: [],
-    });
-    await user.save();
-    res.render("index");
+    // Obtiene los productos destacados
+    var productosDestacados = await Product.find({ Rarity: "High" });
+    res.render("index", { productosDestacados });
+});
+
+app.get("/todasColecciones", async (req, res) => {
+    // Obtiene todos los productos
+    var todosProductos = await Product.find();
+    res.send(todosProductos);
 });
 
 module.exports = app;
