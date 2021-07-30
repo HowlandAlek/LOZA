@@ -625,6 +625,17 @@ footer {
     background-position: center 10%;
 }
 
+/* AQUI */
+.cover-coleccion-wishlist {
+    background-image: url(/img/wishes.jpg);
+    background-position: center 10%;
+}
+
+.cover-coleccion-account {
+    background-image: url(/img/identificate.png);
+    background-position: center 10%;
+}
+
 .encabezado-coleccion h2 {
     color: white;
     font-size: 5rem;

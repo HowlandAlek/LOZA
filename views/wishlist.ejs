@@ -1,12 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Wishlist</title>
-    </head>
-    <body>
-        <h1>Wishlist</h1>
-    </body>
-</html>
+<%- include ("./templates/header") %>
+
+<link rel="stylesheet" href="css/style_wishlist_page.css">
+        
+<section class="encabezado-coleccion cover-coleccion-wishlist contenedor-body">
+    <h2>YOUR WISHES ARE ORDERS. . .</h2>
+</section>
+
+<main>
+
+<div class = "cajas">
+<!-- son cajas -->
+<div class = "slider-images">
+    <div class = "slides">
+
+        <input type="radio" name = "radio-button" id = "image1" checked>
+        <input type="radio" name = "radio-button" id = "image2">
+        <input type="radio" name = "radio-button" id = "image3">
+        <input type="radio" name = "radio-button" id = "image4">
+        <input type="radio" name = "radio-button" id = "image5">
+        
+        <div class = "image-slide s1">
+            <img src = "img/JIraiyaOnToad.PNG" onclick="OpenPopUp(this)">
+        </div>
+
+        <div class = "image-slide">
+            <img src = "img/Kakashi.PNG" onclick="OpenPopUp(this)">
+        </div>
+
+        <div class = "image-slide">
+            <img src = "img/Kurama.PNG" onclick="OpenPopUp(this)">
+        </div>
+
+        <div class = "image-slide">
+            <img src = "img/MInato.PNG" onclick="OpenPopUp(this)">
+        </div>
+
+        <div class = "image-slide">
+            <img src = "img/Tobi.PNG" onclick="OpenPopUp(this)">
+        </div>
+    </div>
+  
+</div>
+
+
+</div>
+
+<div class="navigation-buttons">
+    <label for = "image1" class = "bar"></label>
+    <label for = "image2" class = "bar"></label>
+    <label for = "image3" class = "bar"></label>
+    <label for = "image4" class = "bar"></label>
+    <label for = "image5" class = "bar"></label>
+</div>
+
+
+<div class = "popUp" id= "popUPID">
+    <div id = "close" onclick="CerrarPopUp(this)">
+        <img src="img/cancel.png">
+    </div>
+    <!--Aqui vamos a agregar la vista en galeria--> 
+    <div class = "product" id = "productID">
+        <div class="product-small-img">
+            <img src="" id = "same-img" onclick="ChangeFunction(this)">
+            <img src = "" id = "diff-img" onclick="ChangeFunction(this)">
+        </div>
+
+        <div class="img-container">
+            <img src="" id = "imageBox">
+        </div>
+    </div>
+
+    <div class = "info">
+        <h1 id = "popName"></h1>
+    </div>
+
+    <script>
+        function ChangeFunction(smallImg){
+            var bigImg = document.getElementById("imageBox");
+            bigImg.src = smallImg.src;
+            var c = bigImg.src.slice(26, bigImg.length).slice(-5).slice(0,1);
+            if(c === 'x'){
+                document.getElementById("productID").style.width = "80%"
+                bigImg.style.width = "350px";
+            }else{
+                document.getElementById("productID").style.width = "70%"
+                bigImg.style.width = "290px";
+            }
+            console.log(c);
+        }
+    </script>
+
+
+</div>
+<script>
+
+        function OpenPopUp(img){
+
+            document.getElementById("popUPID").style.display="block";
+
+            // Guardamos el src de la imagen que clickeamos
+            var tsrc = img.src;
+
+            // El unico jpg es jiraiya box
+            console.log(tsrc);
+            console.log(tsrc.length)
+            console.log(tsrc.slice(26, tsrc.length));
+
+            if(tsrc.slice(26, tsrc.length-4) === "JIraiyaOnToad"){
+                var ttsrc = "img/" + tsrc.slice(26, tsrc.length-4) + "_Box.jpg";
+            }else{
+                var ttsrc = "img/" + tsrc.slice(26, tsrc.length-4) + "_Box.PNG";
+            }
+        
+            console.log(ttsrc);
+
+            document.getElementById("imageBox").src = tsrc;
+            document.getElementById("same-img").src = tsrc;
+            document.getElementById("diff-img").src = ttsrc;
+
+            document.getElementById("popName").textContent = tsrc.slice(26, tsrc.length-4) + ": $399.99";
+        }
+
+
+        function CerrarPopUp(crr){
+            document.getElementById("popUPID").style.display="none";
+        }
+
+    </script>
+
+</main>
+
+<%- include ("./templates/footer") %>
