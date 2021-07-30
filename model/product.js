@@ -2,12 +2,13 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ProductSchema = Schema({
+    collection_id: Number,
     name: String,
     collection: String,
     price: Number,
     rarity: String,
     stock: Number,
-    img_url: {
+    img_id: {
         type: String,
         default: "",
     },
